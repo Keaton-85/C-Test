@@ -6,7 +6,7 @@ class Menu{
     
     Calculate calc = new Calculate();
     Wordle wordle = new Wordle();
-    WordGuess wordGuess = new WordGuess();
+    NumberGuess wordGuess = new NumberGuess();
     Console.WriteLine("1. Calculator");
     Console.WriteLine("2. Wordle");
     Console.WriteLine("3. Guess the Number");

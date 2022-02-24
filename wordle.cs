@@ -1,6 +1,5 @@
 using System;
 
-
 public class Wordle{
   public double equal = 0;
   public double one = 0;
@@ -18,7 +17,8 @@ public class Wordle{
     string answer = "";
     Console.WriteLine("Welcome to Wordle");
     Console.WriteLine("Type 'know' to show the letters you know");
-    string[] words = {"world", "money", "zebra", "ready", "joker", "mound", "under", "pound", "after", "learn", "found", "words"};
+    string[] words = {"world", "money", "zebra", "ready", "joker", "mound", "under", "pound", "after", "learn", "found", "words",
+      "smoke", "bring", "poker", "fried", "bonds", "sound"};
     string selectedWord = words[selWord];
     
     string let1 = Convert.ToString(selectedWord[0]);
@@ -36,7 +36,7 @@ public class Wordle{
     while(answer != "quit"){
       answer = Console.ReadLine();
       //Checks if the letter is in the correct spot
-      if(answer != "know"){
+      if(answer != "know" && answer.Length > 4 && answer.Length < 6){
       if(Convert.ToString(answer[0]) == let1){
         Console.WriteLine(let1 + " is in the right spot");
         know1 = let1;
@@ -136,7 +136,7 @@ public class Wordle{
         answer = "quit";
       }
     }
-    //If know is typed in the console
+    //If know is typed in the consoleword
     else{
       Console.WriteLine(know1);
       Console.WriteLine(know2);
